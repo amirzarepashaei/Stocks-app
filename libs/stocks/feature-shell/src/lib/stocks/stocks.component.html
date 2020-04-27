@@ -10,6 +10,7 @@
           aria-labelledby="Please enter a symbol"
           autofocus
           tabindex="1"
+          (keyup)="fetchQuote()"
         />
         <mat-error
           ><span
@@ -24,7 +25,7 @@
     
       <mat-form-field>
         <mat-label for="time-select">Favorite time period</mat-label>
-        <mat-select class="time-select" formControlName="period" tabindex="2">
+        <mat-select class="time-select" formControlName="period" tabindex="2" (ngModelChange)="fetchQuote()">
           <mat-option
             *ngFor="let timePeriod of timePeriods"
             [value]="timePeriod.value"
@@ -33,8 +34,6 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-    
-      <button (click)="fetchQuote()" aria-labelledby="Go" tabindex="3" mat-raised-button>Go</button>
     </form>
   </section>
   <section class="chart-wrapper postion-2">

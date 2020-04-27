@@ -7,6 +7,9 @@
           placeholder="Symbol e.g AAPL"
           formControlName="symbol"
           value=""
+          aria-labelledby="Please enter a symbol"
+          autofocus
+          tabindex="1"
         />
         <mat-error
           ><span
@@ -20,8 +23,8 @@
       </mat-form-field>
     
       <mat-form-field>
-        <mat-label>Favorite time period</mat-label>
-        <mat-select formControlName="period">
+        <mat-label for="time-select">Favorite time period</mat-label>
+        <mat-select class="time-select" formControlName="period" tabindex="2">
           <mat-option
             *ngFor="let timePeriod of timePeriods"
             [value]="timePeriod.value"
@@ -31,11 +34,11 @@
         </mat-select>
       </mat-form-field>
     
-      <button (click)="fetchQuote()" mat-raised-button>Go</button>
+      <button (click)="fetchQuote()" aria-labelledby="Go" tabindex="3" mat-raised-button>Go</button>
     </form>
   </section>
   <section class="chart-wrapper postion-2">
-    <section class="chart">
+    <section class="chart" aria-labelledby="Chart data is displayed">
       <coding-challenge-chart [data$]="quotes$"></coding-challenge-chart>
     </section>
   </section>

@@ -44,8 +44,26 @@ Please provide a short code review of the base `master` branch:
 
 #### Task 1-A
 1. What is done well?
+- I really like the app piping system. The architecture is implemented pretty well. It is organised.
+
+- The implementation of services to fetch data from API and the state manangement is implemented well too.
+
+- Material library is used, which is pretty common practice these days as Google recommends. However, I cannot say this is done well because usage of the libraries is easy but on the otherside dependencies are growing. I would prefer to have lower dependencies on production level applications.
+
+- This appliation is made with Angular 7 and NGRX library. However, using Angular-redux might be a better choice over NGRX.
+
 2. What would you change?
+- As it is in the tasks list, I would add accessibility feature to have a universal design.
+
+- Usage of css grid system would be nice in order to have a responsive website. (PS. I donnot like using libraries like Bootstrap - tho I have used it a lot before - but as we have built-in CSS grid system it would be an advantage to use it).
+
+- It is also good to take advantage of CSS pre-processors such as less or alternative.
+
+- Usually in production-level applications, as there might be network delay, the data might show up with delay. It would be beneficial to add some basic animations like a spinner to show the user a process is happening, hence increasing user experience by showing a meaningful action and reducing headache for end users. 
+
+
 3. Are there any code smells or problematic implementations?
+- After using my own API key and using [Redux DevTools Chrome Extension](https://github.com/zalmoxisus/redux-devtools-extension) I can see that data is retrieved but clicking the button is not showing any data. My assumption is that somewhere the data is passed incorrectly which needs to be fixed.
 
 > Make a PR to fix at least one of the issues that you identify
 

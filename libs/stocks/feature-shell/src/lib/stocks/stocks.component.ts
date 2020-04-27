@@ -5,7 +5,7 @@ import { PriceQueryFacade } from '@coding-challenge/stocks/data-access-price-que
 @Component({
   selector: 'coding-challenge-stocks',
   templateUrl: './stocks.component.html',
-  styleUrls: ['./stocks.component.css']
+  styleUrls: ['./stocks.component.less']
 })
 export class StocksComponent implements OnInit {
   stockPickerForm: FormGroup;

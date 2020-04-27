@@ -52,7 +52,7 @@
               "apps/stocks/src/assets"
             ],
             "styles": [
-              "apps/stocks/src/styles.css"
+              "apps/stocks/src/styles.less"
             ],
             "scripts": [],
             "es5BrowserSupport": true

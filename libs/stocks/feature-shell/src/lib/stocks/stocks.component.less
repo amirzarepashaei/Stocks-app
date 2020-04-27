@@ -1,0 +1,154 @@
+mat-form-field {
+  display: block;
+}
+
+.display-grid() {
+  display: grid;
+  display: -ms-grid;
+}
+
+.grid-position(@row, @rowspan, @column, @columnspan) {
+  grid-row: @row/ span @rowspan;
+  grid-column: @column / span @columnspan;
+  -ms-grid-column: @column;
+  -ms-grid-column-span: @columnspan;
+  -ms-grid-row: @row;
+  -ms-grid-row-span: @rowspan;
+}
+
+.grid-columns(@columns) {
+  grid-template-columns: @columns;
+  -ms-grid-columns: @columns;
+}
+
+.grid-rows(@rows) {
+  grid-template-rows: @rows;
+  -ms-grid-rows: @rows;
+}
+
+.grid-column-align(@value) {
+  justify-self: @value;
+  -ms-grid-column-align: @value;
+}
+
+.grid-row-align(@value) {
+  align-self: @value;
+  -ms-grid-row-align: @value;
+}
+
+.grid-wrapper {
+  background-color: #f9f9f9;
+  .display-grid();
+  .grid-columns(1fr);
+  .position-1 {.grid-position(1, 1, 1, 1)}
+  .position-2 {.grid-position(2, 1, 1, 1)}
+
+  @media only screen and (max-width: 414px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+  @media only screen and (min-width: 415px) and (max-width: 599px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 43px 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1079px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+  @media only screen and (min-width: 1080px) and (max-width: 1399px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 77px 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .form-wrapper {
+      .display-grid();
+      .grid-columns(1fr 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 1fr);
+      form {
+        .grid-position(1, 3, 2, 12);
+      }
+    }
+    .chart-wrapper {
+      .display-grid();
+      .grid-columns(1fr 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 1fr);
+      .chart {
+        .grid-position(1, 1, 2, 12);
+        .grid-column-align(center);
+        margin-top: 40px;
+      }
+    }
+  }
+}

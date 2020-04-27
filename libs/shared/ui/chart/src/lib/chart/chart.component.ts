@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'coding-challenge-chart',
   templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.css']
+  styleUrls: ['./chart.component.less']
 })
 export class ChartComponent implements OnInit {
   @Input() data$: Observable<any>;
